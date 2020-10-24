@@ -61,7 +61,7 @@
     flex-direction: row;
     width: 90%;
     height: 82vh;
-    background-color: #e7e7e7;
+    background-color: #000000;
     padding: 0 10px;
     transform: scale(1,-1);
 }
@@ -79,7 +79,6 @@
     width: 30px;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.644);
-    color: #fff;
     text-align: center;
     font-weight: 700;
     border-radius: 50% 50% 50% 0;

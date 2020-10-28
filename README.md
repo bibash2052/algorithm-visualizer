@@ -6,6 +6,6 @@ Following sorting algorithm has been implemented:
 - [x] **Selection Sort**
 - [x] **Quick Sort**
 - [x] **Merge Sort**
-- [ ] **Heap Sort**
+- [x] **Heap Sort**
 
 Pathfinding algorithm will soon be implememted.

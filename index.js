@@ -2,11 +2,62 @@ let arr = [];
 let divBar = [];
 let divHeight = [];
 let marginValue;
-let arraySize = 10;
+let arraySize = 100;
 let animation_delay = 0;
-let animation_delay_time = 10000 / (Math.floor(arraySize / 10) * 100);
+let animation_delay_time = 10000 / (10 * 100);
 
 const box = document.querySelector(".box");
+
+const mergeSortCall = () => {
+  let final = mergeSort(arr);
+  console.log("Final: ", final);
+};
+const mergeSort = (arr) => {
+  if (arr.length <= 1) return arr;
+  const middleIndex = Math.floor(arr.length / 2);
+  updateDiv(divBar[middleIndex], arr[middleIndex], "#f80b6ebb");
+  let leftArray = arr.slice(0, middleIndex);
+  let rightArray = arr.slice(middleIndex);
+  return mergeArray(mergeSort(leftArray), mergeSort(rightArray));
+};
+
+const mergeArray = (leftArray, rightArray) => {
+  console.log(leftArray, rightArray);
+  let sortedArray = [],
+    i = 0,
+    j = 0,
+    k = i;
+  while (i < leftArray.length && j < rightArray.length) {
+    if (leftArray[i] <= rightArray[j]) {
+      sortedArray[k] = leftArray[i];
+      i++;
+      updateDiv(divBar[k], sortedArray[k], "#f0e5e5");
+    } else {
+      sortedArray[k] = rightArray[j];
+      j++;
+      updateDiv(divBar[k], sortedArray[k], "#247ba0");
+    }
+    k++;
+  }
+
+  while (i < leftArray.length) {
+    sortedArray[k] = leftArray[i];
+    i++;
+    updateDiv(divBar[k], sortedArray[k], "#f0e5e5");
+    k++;
+  }
+
+  while (j < rightArray.length) {
+    sortedArray[k] = rightArray[j];
+    j++;
+    updateDiv(divBar[k], sortedArray[k], "#247ba0");
+    k++;
+  }
+  for (let i = 0; i < sortedArray.length; i++) {
+    updateDiv(divBar[i], sortedArray[i], "#00fde496");
+  }
+  return sortedArray;
+};
 
 const quickSortCall = () => {
   let low = 0;
@@ -106,7 +157,7 @@ const insertionSort = () => {
       updateDiv(divBar[position], divHeight[position - 1], "#3d8a66");
       divHeight[position] = divHeight[position - 1];
       position = position - 1;
-      updateDiv(divBar[position], divHeight[position], "#2c2d59");
+      updateDiv(divBar[position], divHeight[position], "#e64646");
     }
     divHeight[position] = indexValue;
     updateDiv(divBar[position], divHeight[position], "#3d8a66");

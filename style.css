@@ -90,6 +90,7 @@
     bottom: 0%;
     top: 100%;
     color: #fff;
+    /* color: #e64646; */
   }
   
   .tooltip:hover .tooltiptext {

@@ -1,10 +1,10 @@
-# algorithm-visualizer
-This project is made to visualize the working of the sorting and pathfinding algorithm.
+# Algorithm-visualizer
+This project is made to visualize the working of the _**sorting**_ and _**pathfinding algorithm**_.
 Following sorting algorithm has been implemented:
-	1. Bubble Sort
-	2. Insertion Sort
-	3. Selection Sort
-	4. Quick Sort
-	5. Merge Sort
+	**- Bubble Sort
+	- Insertion Sort
+	- Selection Sort
+	- Quick Sort
+	- Merge Sort**
 Remaining sorting algorithm is Heap Sort.
 Pathfinding algorithm will soon be implememted.

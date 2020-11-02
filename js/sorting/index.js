@@ -2,7 +2,7 @@ let arr = [];
 let divBar = [];
 let divHeight = [];
 let marginValue;
-let arraySize = 100;
+let arraySize = 50;
 let animation_delay = 0;
 let animation_delay_time = 1000 / (10 * 100);
 
